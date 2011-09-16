@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11203ABB-D441-4559-87CE-4A781B660DA9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WcfWebApi.Preview5.Explorations.SelfHostedDemos</RootNamespace>
+    <AssemblyName>WcfWebApi.Preview5.Explorations.SelfHostedDemos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomParameterConversion.cs" />
+    <Compile Include="First.cs" />
+    <Compile Include="MemoryHost.cs" />
+    <Compile Include="MultiPartRequest.cs" />
+    <Compile Include="ParameterConversionOperationHandlerExample.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskBasedOperationsDemo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\prototypes\Microsoft.ApplicationServer.HttpEnhancements\Microsoft.ApplicationServer.HttpEnhancements.csproj">
+      <Project>{8C5CA420-BDC2-4B92-A20E-4EC1FBEEA27D}</Project>
+      <Name>Microsoft.ApplicationServer.HttpEnhancements</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.ApplicationServer.Http\Microsoft.ApplicationServer.Http.csproj">
+      <Project>{947ABFDB-E1A8-47D5-A982-A7B03CE02BC6}</Project>
+      <Name>Microsoft.ApplicationServer.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Net.Http.Formatting\Microsoft.Net.Http.Formatting.csproj">
+      <Project>{B4A3D624-FC8E-4E20-A7C1-054B48B17F79}</Project>
+      <Name>Microsoft.Net.Http.Formatting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Net.Http\Microsoft.Net.Http.csproj">
+      <Project>{1A75CF16-5727-4ADA-B15A-3037703FC2ED}</Project>
+      <Name>Microsoft.Net.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfWebApi.Preview5.Explorations.Common\WcfWebApi.Preview5.Explorations.Common.csproj">
+      <Project>{749A93E8-17CC-469B-8C5E-5216AF179B7A}</Project>
+      <Name>WcfWebApi.Preview5.Explorations.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="upload.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
