@@ -11,9 +11,9 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
         {
             //FirstHost.Run();
             //CustomParameterConversionHost.Run();
-            //MemoryHost.Run();
+            MemoryHost.Run();
             //ParameterConversionOperationHandlerExample.Run();
-            TaskBasedOperationsDemo.Run();
+            //TaskBasedOperationsDemo.Run();
             //MultiPartRequest.Run();
         }
     }
