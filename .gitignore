@@ -8,6 +8,7 @@
 *.pidb
 *.userprefs
 *.svclog
+*gpState
 AssemblyInfo.cs
 .DS_Store
 deploy/
