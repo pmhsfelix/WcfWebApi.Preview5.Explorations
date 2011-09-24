@@ -28,7 +28,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
             using (var host = new HttpServiceHost(typeof(TheService), new string[0]))
             {
                 var mb = new HttpMemoryBinding();
-                var ep = host.AddServiceEndpoint(typeof (TheService), mb, "http://dymmy-http-scheme-uri");
+                var ep = host.AddServiceEndpoint(typeof (TheService), mb, "http://dummy-http-scheme-uri");
                 foreach (var op in ep.Contract.Operations)
                 {
                     op.Behaviors.Find<OperationBehaviorAttribute>().AutoDisposeParameters = false;
@@ -37,7 +37,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                 Console.WriteLine("Host opened at {0}", host.Description.Endpoints[0].Address);
                 var client = new HttpClient(mb.GetHttpMemoryHandler());
                 // Yes, it must be async. Apparently, sync is not supported with the memory channel
-                var aresp = client.GetAsync("http://another-dymmy-http-scheme-uri/hello");
+                var aresp = client.GetAsync("http://another-dummy-http-scheme-uri/hello");
                 Console.WriteLine(aresp.Result.Content.ReadAsString());
                 Console.ReadKey();
             }
