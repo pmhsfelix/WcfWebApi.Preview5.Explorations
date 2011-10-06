@@ -11,6 +11,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using Microsoft.ApplicationServer.Http;
 using Microsoft.ApplicationServer.Http.Dispatcher;
+using WcfWebApi.Preview5.Explorations.Common;
 
 namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
 {
@@ -19,6 +20,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
         [ServiceContract]
         class TheService
         {
+            [Authorize("Pedro")]
             [WebGet(UriTemplate="")]
             HttpResponseMessage Get(IPrincipal principal)
             {
@@ -38,10 +40,11 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                                        {
                                            if (
                                                desc.InputParameters.Any(
-                                                   p => p.ParameterType == typeof(IPrincipal)))
+                                                   p => p.ParameterType == typeof (IPrincipal)))
                                                coll.Add(new PrincipalFromSecurityContext());
                                        }
-                           };
+                           }
+                .CheckAuthorization();
             using (var host = new HttpServiceHost(typeof(TheService), conf, new string[0]))
             {
                 var ep = host.AddHttpEndpoint(typeof (TheService), "https://localhost:8435/greet");

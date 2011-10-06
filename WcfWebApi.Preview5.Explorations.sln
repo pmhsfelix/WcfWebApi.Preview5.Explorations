@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfWebApi.Preview5.Explorat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfWebApi.Preview5.Explorations.SelfHostedDemos", "WcfWebApi.Preview5.Explorations.SelfHostedDemos\WcfWebApi.Preview5.Explorations.SelfHostedDemos.csproj", "{11203ABB-D441-4559-87CE-4A781B660DA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfWebApi.Preview5.Explorations.IisHostedDemos", "WcfWebApi.Preview5.Explorations.IisHostedDemos\WcfWebApi.Preview5.Explorations.IisHostedDemos.csproj", "{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +211,21 @@ Global
 		{11203ABB-D441-4559-87CE-4A781B660DA9}.VsMsBuild|Mixed Platforms.Build.0 = Release|x86
 		{11203ABB-D441-4559-87CE-4A781B660DA9}.VsMsBuild|x86.ActiveCfg = Release|x86
 		{11203ABB-D441-4559-87CE-4A781B660DA9}.VsMsBuild|x86.Build.0 = Release|x86
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.Release|x86.ActiveCfg = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.VsMsBuild|Any CPU.ActiveCfg = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.VsMsBuild|Any CPU.Build.0 = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.VsMsBuild|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.VsMsBuild|Mixed Platforms.Build.0 = Release|Any CPU
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD}.VsMsBuild|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -227,5 +244,6 @@ Global
 		{8C5CA420-BDC2-4B92-A20E-4EC1FBEEA27D} = {912284F7-89B7-4A6A-8CAF-F9F928031E32}
 		{749A93E8-17CC-469B-8C5E-5216AF179B7A} = {D284C4C0-1685-4E2B-8F43-D8BE2D52E6FB}
 		{11203ABB-D441-4559-87CE-4A781B660DA9} = {D284C4C0-1685-4E2B-8F43-D8BE2D52E6FB}
+		{D98FCFB1-4CF0-4E67-851F-169D215BCDFD} = {D284C4C0-1685-4E2B-8F43-D8BE2D52E6FB}
 	EndGlobalSection
 EndGlobal

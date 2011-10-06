@@ -23,5 +23,20 @@ namespace WcfWebApi.Preview5.Explorations.Common
                                         };
             return conf;
         }
+
+        public static HttpConfiguration CheckAuthorization(this HttpConfiguration conf)
+        {
+            conf.AddRequestHandlers((coll, ep, desc) =>
+                                        {
+                                            var attr =
+                                                desc.Attributes.Where(t => t.GetType() == typeof (AuthorizeAttribute)).
+                                                    FirstOrDefault();
+                                            if (attr != null)
+                                            {
+                                                coll.Add(new AuthorizeOperationHandler(attr as AuthorizeAttribute));
+                                            }
+                                        });
+            return conf;
+        }
     }
 }
