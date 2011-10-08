@@ -44,7 +44,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                                                coll.Add(new PrincipalFromSecurityContext());
                                        }
                            }
-                .CheckAuthorization();
+                .EnableAuthorizeAttribute();
             using (var host = new HttpServiceHost(typeof(TheService), conf, new string[0]))
             {
                 var ep = host.AddHttpEndpoint(typeof (TheService), "https://localhost:8435/greet");

@@ -24,7 +24,7 @@ namespace WcfWebApi.Preview5.Explorations.Common
             return conf;
         }
 
-        public static HttpConfiguration CheckAuthorization(this HttpConfiguration conf)
+        public static HttpConfiguration EnableAuthorizeAttribute(this HttpConfiguration conf)
         {
             conf.AddRequestHandlers((coll, ep, desc) =>
                                         {
