@@ -51,6 +51,7 @@
     <Compile Include="ConfigureUriTemplate.cs" />
     <Compile Include="CustomParameterConversion.cs" />
     <Compile Include="First.cs" />
+    <Compile Include="JsonValueDemo.cs" />
     <Compile Include="MemoryHost.cs" />
     <Compile Include="MultiPartRequest.cs" />
     <Compile Include="ParameterConversionOperationHandlerExample.cs" />
@@ -69,6 +70,10 @@
     <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.ApplicationServer.Http\Microsoft.ApplicationServer.Http.csproj">
       <Project>{947ABFDB-E1A8-47D5-A982-A7B03CE02BC6}</Project>
       <Name>Microsoft.ApplicationServer.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Json\Microsoft.Json.csproj">
+      <Project>{3B1B5BCE-4831-4203-8D8B-5F8AB1A3C03D}</Project>
+      <Name>Microsoft.Json</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Net.Http.Formatting\Microsoft.Net.Http.Formatting.csproj">
       <Project>{B4A3D624-FC8E-4E20-A7C1-054B48B17F79}</Project>

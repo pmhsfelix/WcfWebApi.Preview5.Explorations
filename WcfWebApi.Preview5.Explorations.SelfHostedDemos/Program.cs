@@ -16,7 +16,8 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
             //TaskBasedOperationsDemo.Run();
             //MultiPartRequest.Run();
             //BasicAuthenticationWithHttpsDemo.Run();
-            ConfigureUriTemplate.Run();
+            //ConfigureUriTemplate.Run();
+            JsonValueDemo.Run();
         }
     }
 }
