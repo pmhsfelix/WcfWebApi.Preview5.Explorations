@@ -38,7 +38,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                 var client = new HttpClient(mb.GetHttpMemoryHandler());
                 // Yes, it must be async. Apparently, sync is not supported with the memory channel
                 var aresp = client.GetAsync("http://another-dummy-http-scheme-uri/hello");
-                Console.WriteLine(aresp.Result.Content.ReadAsString());
+                Console.WriteLine(aresp.Result.Content.ReadAsStringAsync().Result);
                 Console.ReadKey();
             }
         }

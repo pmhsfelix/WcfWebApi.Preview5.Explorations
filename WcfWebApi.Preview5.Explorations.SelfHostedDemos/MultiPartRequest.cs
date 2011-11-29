@@ -26,7 +26,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                         throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
                     }
                     var prov = new MultipartFormDataStreamProvider("c:/users/pedro/data/tmp");
-                    var conts = req.Content.ReadAsMultipart(prov);
+                    req.Content.ReadAsMultipart(prov);
                     var sb = new StringBuilder("Files uploaded\n");
                     foreach (var me in prov.BodyPartFileNames)
                     {

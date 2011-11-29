@@ -13,11 +13,11 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
             //CustomParameterConversionHost.Run();
             //MemoryHost.Run();
             //ParameterConversionOperationHandlerExample.Run();
-            //TaskBasedOperationsDemo.Run();
+            TaskBasedOperationsDemo.Run();
             //MultiPartRequest.Run();
             //BasicAuthenticationWithHttpsDemo.Run();
             //ConfigureUriTemplate.Run();
-            JsonValueDemo.Run();
+            //JsonValueDemo.Run();
         }
     }
 }

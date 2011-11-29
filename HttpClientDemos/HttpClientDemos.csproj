@@ -47,17 +47,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Json\Microsoft.Json.csproj">
-      <Project>{3B1B5BCE-4831-4203-8D8B-5F8AB1A3C03D}</Project>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\src\Microsoft.Json\Microsoft.Json.csproj">
+      <Project>{F0441BE9-BDC0-4629-BE5A-8765FFAA2481}</Project>
       <Name>Microsoft.Json</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Net.Http.Formatting\Microsoft.Net.Http.Formatting.csproj">
-      <Project>{B4A3D624-FC8E-4E20-A7C1-054B48B17F79}</Project>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\src\Microsoft.Net.Http.Formatting\Microsoft.Net.Http.Formatting.csproj">
+      <Project>{668E9021-CE84-49D9-98FB-DF125A9FCDB0}</Project>
       <Name>Microsoft.Net.Http.Formatting</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Net.Http\Microsoft.Net.Http.csproj">
-      <Project>{1A75CF16-5727-4ADA-B15A-3037703FC2ED}</Project>
-      <Name>Microsoft.Net.Http</Name>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\src\System.Net.Http\System.Net.Http.csproj">
+      <Project>{6D7A8E9E-1576-4E5D-AB2F-F3B540FD9AD1}</Project>
+      <Name>System.Net.Http</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

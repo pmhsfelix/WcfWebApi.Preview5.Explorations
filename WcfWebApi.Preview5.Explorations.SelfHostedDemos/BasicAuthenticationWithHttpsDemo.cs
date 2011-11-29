@@ -55,7 +55,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                 host.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomValidator();
 
                 host.Open();
-                Console.WriteLine("Service is opened, press any key to continue");
+                Console.WriteLine("Service is opened at {0}, press any key to continue",ep.Address);
                 Console.ReadKey();
             }
         }

@@ -28,7 +28,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
             [WebInvoke(Method="post",UriTemplate = "")]
             public HttpResponseMessage Post(ObjectContent<Model> c)
             {
-                Model m = c.ReadAs();
+                Model m = c.ReadAsAsync().Result;
                 Console.WriteLine("x = {0}, y = {1}, z = {2}",m.x,m.y,m.z);
                 return new HttpResponseMessage()
                            {
@@ -51,7 +51,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
         public static void Run()
         {
             var config = new HttpConfiguration();
-            config.RequestHandlers = (coll, ep, desc) =>
+            config.RequestHandlers += (coll, ep, desc) =>
                                          {
                                              if (
                                                  desc.Attributes.Any(a => a.GetType() == typeof(JsonExtractAttribute))
@@ -69,7 +69,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                 data.x = "a string";
                 data.y = "13";
                 data.z = "3.14";
-                var resp = client.Post("http://localhost:8080/v2", new ObjectContent<JsonValue>(data, "application/json"));
+                var resp = client.PostAsync("http://localhost:8080/v2", new ObjectContent<JsonValue>(data, "application/json")).Result;
                 Console.WriteLine(resp.StatusCode);
             }
         }
@@ -105,7 +105,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
         protected override object[] OnHandle(object[] input)
         {
             var req = input[0] as HttpRequestMessage<JsonValue>;
-            var value = req.Content.ReadAs();
+            var value = req.Content.ReadAsAsync().Result;
             var output = new object[_prms.Length];
             for (int i = 0; i < _prms.Length; ++i)
             {

@@ -48,13 +48,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.ApplicationServer.Http\Microsoft.ApplicationServer.Http.csproj">
-      <Project>{947ABFDB-E1A8-47D5-A982-A7B03CE02BC6}</Project>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\src\Microsoft.ApplicationServer.Http\Microsoft.ApplicationServer.Http.csproj">
+      <Project>{CD92FACC-3083-4458-BE12-1700CF95F2B2}</Project>
       <Name>Microsoft.ApplicationServer.Http</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\Http\Src\Microsoft.Net.Http\Microsoft.Net.Http.csproj">
-      <Project>{1A75CF16-5727-4ADA-B15A-3037703FC2ED}</Project>
-      <Name>Microsoft.Net.Http</Name>
+    <ProjectReference Include="..\..\wcf.codeplex.com\WCFWebApi\src\System.Net.Http\System.Net.Http.csproj">
+      <Project>{6D7A8E9E-1576-4E5D-AB2F-F3B540FD9AD1}</Project>
+      <Name>System.Net.Http</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

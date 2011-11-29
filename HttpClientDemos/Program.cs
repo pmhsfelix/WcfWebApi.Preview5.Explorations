@@ -13,17 +13,10 @@ namespace HttpClientDemos
 
     class StubMessageHandler : HttpMessageHandler
     {
-        protected override HttpResponseMessage Send(HttpRequestMessage request, CancellationToken cancellationToken)
-        {
-            Console.WriteLine(request);
-            Console.WriteLine(request.Content.ReadAsString());
-            return new HttpResponseMessage(HttpStatusCode.NotImplemented);
-        }
-
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             Console.WriteLine(request);
-            Console.WriteLine(request.Content.ReadAsString());
+            Console.WriteLine(request.Content.ReadAsStringAsync().Result);
             return Task.Factory.StartNew(() => new HttpResponseMessage(HttpStatusCode.NotImplemented));
         }
     }
@@ -42,7 +35,7 @@ namespace HttpClientDemos
             json.aprop4 = new JsonArray() {"abc"};
             
             var cont = new ObjectContent<JsonValue>(json,"application/json");
-            client.Post("http://www.example.com",cont);
+            client.PostAsync("http://www.example.com",cont).Wait();
         }
     }
 }

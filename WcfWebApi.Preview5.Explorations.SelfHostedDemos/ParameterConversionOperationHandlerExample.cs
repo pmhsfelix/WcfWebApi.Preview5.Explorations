@@ -45,7 +45,7 @@ namespace WcfWebApi.Preview5.Explorations.SelfHostedDemos
                 host.Open();
                 Console.WriteLine("Host opened at {0}", host.Description.Endpoints[0].Address);
                 var client = new HttpClient();
-                Console.WriteLine(client.Get("http://localhost:8080/conv/hello/3").Content.ReadAsString());
+                Console.WriteLine(client.GetAsync("http://localhost:8080/conv/hello/3").Result.Content.ReadAsStringAsync().Result);
             }
         }
     }
